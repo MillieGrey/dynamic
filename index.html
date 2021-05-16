@@ -1,12 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Notes</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="card card-body text-center bg-secondary mt-5" >
+                <h5 class="card-title">Suh</h5>
+
+            </div>
+            
+            <!-- container for where the notes get typed. -->
+            <div class="container">
+                <div class="card card-body text-center bg-secondary mt-5" >
+                <div class="form-horizontal>
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <textarea class="form-control" rows="6" placeholder="What's up?" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- container for where the notes go. -->
+            <div class="container" id="noteDisplay">
+                <div class="card bg-secondary card-body text-center mt-3">
+                <!-- using row-cols instead of rows and then cols, you can define how many cols you want but then anything added after that seems to adhere to the grid which is bae -->
+                <!-- Seems like in order to make the note cards have a maximum height/ be scrollable we gotta use CSS so we gotta get on learning that -->
+                <div class="row row-cols-3">
+                    <div class="card bg-dark text-white text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices vel urna ac bibendum. Integer non massa ut diam lobortis posuere. Fusce sit amet varius diam. Nam ligula sem, dignissim sit amet tempus nec, bibendum ac neque. Phasellus nulla odio, hendrerit iaculis aliquet eu, condimentum posuere mauris. Nunc iaculis nisl in erat pharetra euismod. In tristique nulla id erat commodo accumsan. Nullam maximus, neque</div>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+  </body>
 </html>
