@@ -29,13 +29,13 @@ function getNotes(){
         notes = JSON.parse(localStorage.getItem('notes'));
     }
 
-    notes.forEach(function(task){
+    notes.forEach(function(note){
             //create li element
             const li = document.createElement('li');
             //add class
             li.className = "card bg-dark text-white text-center";
             //create text node and append to LI
-            li.appendChild(document.createTextNode(noteInput.value));
+            li.appendChild(document.createTextNode(note));
             //create new link Element
             const link = document.createElement('a');
             //add class
