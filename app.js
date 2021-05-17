@@ -47,5 +47,5 @@ function addNote(e) {
     noteInput.value = '';
 
     console.log(li);
-    e.preventDefault();
+
 }
