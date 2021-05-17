@@ -7,7 +7,7 @@ const noteDisplay = document.getElementById("noteDisplay")
 // Execute a function when the user releases a key on the keyboard
 noteInput.addEventListener("keyup", function(event) {
     // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 && !event.shiftKey) {
       // Cancel the default action, if needed
       event.preventDefault();
       // Trigger the button element with a click
@@ -20,6 +20,7 @@ noteInput.addEventListener("keyup", function(event) {
 
 
 //get notes from Local storage (LS)
+document.addEventListener('DOMContentLoaded', getNotes);
 function getNotes(){
     let notes;
     if(localStorage.getItem('notes') === null){
@@ -73,7 +74,7 @@ function addNote(e) {
     noteDisplay.appendChild(li);
 
     //store in LS (local Storage)
-    //storeNoteInLocalStorage(noteInput.value);
+    storeNoteInLocalStorage(noteInput.value);
 
     //clear input
     noteInput.value = '';
