@@ -96,9 +96,3 @@ function storeNoteInLocalStorage(note){
 
     localStorage.setItem('notes', JSON.stringify(notes));
 }
-
-if (condition) {
-    
-} else {
-    
-}
